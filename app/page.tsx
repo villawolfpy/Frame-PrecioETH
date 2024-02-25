@@ -5,35 +5,35 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Get current ETH precio!',
-    },
-
-    {
-    label: 'ETH / USD', 
-    action: 'post',
+      label: 'Story time!',
     },
     {
-    label: 'ETH/ BTC',
-    action: 'post',
+      action: 'link',
+      label: 'Link to Google',
+      target: 'https://www.google.com',
+    },
+    {
+      label: 'Redirect to pictures',
+      action: 'post_redirect',
     },
   ],
- 
   image: {
-    src: `${NEXT_PUBLIC_URL}/ETH.png`,
+    src: `${NEXT_PUBLIC_URL}/park-3.png`,
     aspectRatio: '1:1',
   },
-
+  input: {
+    text: 'Tell me a boat story',
+  },
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(NEXT_PUBLIC_URL),
-  title: 'ETH Price',
-  description: 'Get real-time ETH price!',
+  title: 'zizzamia.xyz',
+  description: 'LFG',
   openGraph: {
-    title: 'ETH Price',
-    description: 'Get real-time ETH price!',
-    images: [`${NEXT_PUBLIC_URL}/ETH.png`],
+    title: 'zizzamia.xyz',
+    description: 'LFG',
+    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
   other: {
     ...frameMetadata,
@@ -43,9 +43,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>
-        follow <a href="https://warpcast.com/villawolf">@villawolf.eth</a>
-      </h1>
+      <h1>zizzamia.xyz</h1>
     </>
   );
 }
